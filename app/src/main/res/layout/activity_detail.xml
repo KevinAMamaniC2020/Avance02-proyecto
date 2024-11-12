@@ -1,42 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
+    tools:context=".DetailActivity"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/detailTitle"
-        android:layout_marginTop="14dp"
-        android:text="Title"
-        android:textSize="24sp"
-        android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:layout_marginBottom="12dp"/>
-
-    <ImageView
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:id="@+id/detailImage"
-        android:padding="8dp"
-        android:layout_gravity="center"
-        android:src="@drawable/catalina_convento"
-        android:scaleType="centerCrop"/>
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Description"
-        android:padding="20dp"
-        android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:id="@+id/detailDesc"/>
+        android:orientation="vertical"
+        android:padding="0dp">
 
-</LinearLayout>
+        <!-- Imagen principal -->
+
+        <!-- Título -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="421dp"
+                android:layout_height="203dp"
+                android:layout_gravity="center"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/catalina_convento" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start|top"
+                android:layout_margin="16dp"
+                android:background="@drawable/circular_background"
+                android:contentDescription="Botón de retroceso"
+                android:scaleType="center"
+                android:src="@drawable/baseline_navigate_before_24"
+                />
+
+            <ImageButton
+                android:id="@+id/planoButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_margin="16dp"
+                android:background="@drawable/circular_background"
+                android:contentDescription="Botón plano"
+                android:scaleType="center"
+                android:src="@drawable/baseline_streetview_24" />
+
+            <ImageButton
+                android:id="@+id/ubicacionButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/circular_background"
+                android:contentDescription="Botón acceder a ubicacion en mapa"
+                android:scaleType="center"
+                android:src="@drawable/baseline_location_pin_24" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/detailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="15dp"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Descripción -->
+        <TextView
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="15dp"
+            android:text="Descripcion:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/detailDesc"
+            android:layout_width="411dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="15dp"
+            android:text="Description"
+            android:textColor="#80000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Sección de opiniones y calificaciones -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="16dp"
+            android:background="#D3D3D3" />
+
+        <!-- Título de calificaciones -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Opiniones y Calificaciones"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Calificación promedio y RatingBar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/averageRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:progressTint="#FFC107"
+                android:rating="0"
+                android:stepSize="0.5" />
+
+            <TextView
+                android:id="@+id/totalReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="0 opiniones"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Sección de opiniones -->
+        <!-- RecyclerView para mostrar comentarios -->
+        <Button
+            android:id="@+id/btn_add_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="#A65F5F"
+            android:text="Califica y comenta" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+    </LinearLayout>
+</ScrollView>
