@@ -58,6 +58,47 @@ public class AreaFragment extends Fragment {
                     areaImageView.setImageResource(R.drawable.claustro_naranjos); // Imagen en res/drawable
                     break;
 
+                case "Claustro Mayor":
+                    titleTextView.setText("Claustro Mayor");
+                    descriptionTextView.setText("El patio central del monasterio, rodeado de arcos y decorado con coloridas flores, es un espacio tranquilo donde las monjas solían congregarse para la oración y el descanso.");
+                    areaImageView.setImageResource(R.drawable.calustro_mayor); // Imagen en res/drawable
+                    break;
+                case "Pinacoteca":
+                    titleTextView.setText("Pinacoteca");
+                    descriptionTextView.setText("Alberga una colección de arte religioso colonial, incluidas obras de la escuela cusqueña, que muestran la devoción y el simbolismo religioso de la época.");
+                    areaImageView.setImageResource(R.drawable.pinacoteca); // Imagen en res/drawable
+                    break;
+                case "Coro Bajo":
+                    titleTextView.setText("Coro Bajo");
+                    descriptionTextView.setText("Un área utilizada por las monjas para los cantos y rezos en comunidad, con antiguos asientos de madera y una atmósfera de recogimiento espiritual.");
+                    areaImageView.setImageResource(R.drawable.coro_bajo); // Imagen en res/drawable
+                    break;
+                case "Iglesia Santa Catalina":
+                    titleTextView.setText("Iglesia Santa Catalina");
+                    descriptionTextView.setText(" La iglesia principal del monasterio, con una arquitectura sobria y altares dedicados a diferentes santos, donde se celebraban las misas y actos religiosos.");
+                    areaImageView.setImageResource(R.drawable.iglesia_santa_catalina); // Imagen en res/drawable
+                    break;
+                case "Nuevo Monasterio":
+                    titleTextView.setText("Nuevo Monasterio");
+                    descriptionTextView.setText("Construido en el siglo XVIII, esta zona ofrecía más privacidad a las monjas de clausura y presenta celdas individuales y áreas de retiro personal.");
+                    areaImageView.setImageResource(R.drawable.nuevo_monasterio); // Imagen en res/drawable
+                    break;
+                case "Calle Toledo":
+                    titleTextView.setText("Calle Toledo");
+                    descriptionTextView.setText("Una de las coloridas calles internas, con paredes de sillar pintadas de rojo, que recrea el ambiente de un típico pueblo colonial.");
+                    areaImageView.setImageResource(R.drawable.calle_toledo); // Imagen en res/drawable
+                    break;
+                case "Calle Sevilla":
+                    titleTextView.setText("Calle Sevilla");
+                    descriptionTextView.setText("Otra de las calles internas del monasterio, decorada en tonos azules, que conecta distintas áreas y añade al encanto pintoresco del lugar.");
+                    areaImageView.setImageResource(R.drawable.calle_sevilla); // Imagen en res/drawable
+                    break;
+                case "Calle Cordova":
+                    titleTextView.setText("Calle Córdoba");
+                    descriptionTextView.setText("Un callejón interno de tonos ocre, rodeado de celdas y pequeños patios, que da la sensación de estar en una pequeña villa española.");
+                    areaImageView.setImageResource(R.drawable.calle_cordova); // Imagen en res/drawable
+                    break;
+
                 // Agrega más áreas según sea necesario
                 default:
                     titleTextView.setText("Área Desconocida");

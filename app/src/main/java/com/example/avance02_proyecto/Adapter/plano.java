@@ -13,7 +13,7 @@ import android.view.View;
 public class plano extends View {
 
     private Paint paintWall, paintBorde,paintSeleccion, paintWindow, paintText;
-    private Rect calleGranadaRect, claustroNoviciasRect, patioSilencioRect,claustroNaranjosRect; // Ejemplo de áreas seleccionables
+    private Rect calleGranadaRect, claustroNoviciasRect, patioSilencioRect,claustroNaranjosRect, claustroMayorRect,pinacotecaRect,coroBajoRect,santaCatalinaRect,nuevoMonasterioRect,piletaRect,toledoRect,sevillaRect,cordovaRect; // Ejemplo de áreas seleccionables
 
 
     public interface OnAreaClickListener {
@@ -64,6 +64,15 @@ public class plano extends View {
         claustroNoviciasRect = new Rect(410, 40, 540, 110);
         patioSilencioRect = new Rect(260, 40, 390, 110);
         claustroNaranjosRect = new Rect(260, 140, 340, 220);
+        claustroMayorRect = new Rect(130, 140, 190, 350);
+        pinacotecaRect = new Rect(200, 110, 250, 350);
+        coroBajoRect = new Rect(50, 110, 120, 350);
+        santaCatalinaRect = new Rect(50, 350, 120, 800);
+        nuevoMonasterioRect = new Rect(340, 230, 550, 550);
+        piletaRect = new Rect();
+        toledoRect = new Rect(190, 600, 300, 800);
+        sevillaRect = new Rect(140, 810, 300, 860);
+        cordovaRect = new Rect(250, 350, 300, 500);
 
     }
 
@@ -87,16 +96,16 @@ public class plano extends View {
         canvas.drawRect(claustroNoviciasRect, paintSeleccion);//Area Clautro Novicias
         canvas.drawRect(patioSilencioRect, paintSeleccion);//Area Patio del silencio
         canvas.drawRect(claustroNaranjosRect, paintSeleccion);//Area Claustro de los naranjos
-        canvas.drawRect(130, 140, 190, 350, paintSeleccion);//Area Claustro Mayor
-        canvas.drawRect(200, 110, 250, 350, paintWall); //Area Pinacoteca
-        canvas.drawRect(50, 110, 120, 350, paintWall);  //Area CoroBajo
-        canvas.drawRect(50, 350, 120, 800, paintWall); //Area Iglesia de santa catalina
-        canvas.drawRect(340, 230, 550, 550, paintWall); //Area Nuevo Monasterio
+        canvas.drawRect(claustroMayorRect, paintSeleccion);//Area Claustro Mayor
+        canvas.drawRect(piletaRect, paintWall); //Area Pinacoteca
+        canvas.drawRect(coroBajoRect, paintWall);  //Area CoroBajo
+        canvas.drawRect(santaCatalinaRect, paintWall); //Area Iglesia de santa catalina
+        canvas.drawRect(nuevoMonasterioRect, paintWall); //Area Nuevo Monasterio
         canvas.drawCircle(138, 565, 15, paintWindow); //Area de la pileta
         canvas.drawRect(calleGranadaRect, paintSeleccion); //Area de calle Granada
-        canvas.drawRect(190, 600, 300, 800, paintSeleccion); //Area calle Toledo
-        canvas.drawRect(140, 810, 300, 860, paintSeleccion);//Area Calle Sevilla
-        canvas.drawRect(250, 350, 300, 500, paintSeleccion);//Area Calle Cordova
+        canvas.drawRect(toledoRect, paintSeleccion); //Area calle Toledo
+        canvas.drawRect(sevillaRect, paintSeleccion);//Area Calle Sevilla
+        canvas.drawRect(cordovaRect, paintSeleccion);//Area Calle Cordova
 
 
         //Resto de planos dibujados
@@ -172,6 +181,22 @@ public class plano extends View {
                 if (listener != null) listener.onAreaClicked("Patio del Silencio");
             } else if (claustroNaranjosRect.contains((int) x, (int) y)) {
                 if (listener != null) listener.onAreaClicked("Claustro de los Naranjos");
+            }else if (claustroMayorRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Claustro Mayor");
+            }else if (pinacotecaRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Pinacoteca");
+            }else if (coroBajoRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Coro Bajo");
+            }else if (santaCatalinaRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Iglesia Santa Catalina");
+            }else if (nuevoMonasterioRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Nuevo Monasterio");
+            }else if (toledoRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Calle Toledo");
+            }else if (sevillaRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Calle Sevilla");
+            }else if (cordovaRect.contains((int) x, (int) y)) {
+                if (listener != null) listener.onAreaClicked("Calle Cordova");
             }
         }
         return true;

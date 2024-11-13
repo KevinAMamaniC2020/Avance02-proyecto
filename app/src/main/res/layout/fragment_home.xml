@@ -9,21 +9,74 @@
     android:orientation="vertical"
     tools:context=".fragments.HomeFragment">
 
-    <androidx.appcompat.widget.SearchView
+    <LinearLayout
+        android:id="@+id/profileHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp"
+        android:layout_margin="9dp"
+        android:background="@drawable/search_bkg"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- Texto de bienvenida y nombre de usuario -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hola, User"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nombreusuario"
+                android:textSize="14sp"
+                android:textColor="#808080"/>
+        </LinearLayout>
+
+        <!-- Iconos de configuración, notificaciones y regreso -->
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_logout_24"
+            android:contentDescription="Back"/>
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
-        app:iconifiedByDefault="false"
-        app:searchHintIcon="@null"
-        app:queryHint="¿Qué lugar Buscas?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileHeader"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/search_bkg"
         android:focusable="false"
         app:closeIcon="@drawable/baseline_clear_24"
-        app:searchIcon="@drawable/baseline_search_24"
-        android:background="@drawable/search_bkg">
+        app:iconifiedByDefault="false"
+        app:queryHint="¿Qué lugar Buscas?"
+        app:searchHintIcon="@null"
+        app:searchIcon="@drawable/baseline_search_24">
+
     </androidx.appcompat.widget.SearchView>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -32,7 +85,6 @@
         android:layout_below="@id/cgAreas"
         android:layout_marginTop="15dp"
         android:scrollbars="vertical" />
-
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/cgAreas"
@@ -67,9 +119,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Museo" />
-
-
-
     </com.google.android.material.chip.ChipGroup>
 
 

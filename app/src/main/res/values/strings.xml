@@ -1,31 +1,18 @@
 <resources>
     <string name="app_name">Avance02-proyecto</string>
-    <string name="date">A thin wrapper around a millisecond value that allows JDBC to identify this as an SQL DATE
-        value. A milliseconds value represents the number of milliseconds that have passed since January 1, 1970 00:00:00.000 GMT.
-        To conform with the definition of SQL DATE, the millisecond values wrapped by a java.sql.Date instance
-        must be normalized by setting the hours, minutes, seconds, and milliseconds to zero in the particular time zone with which the instance is associated.
+    <string name="IglesiaJesus">La Iglesia de la Compañía de Jesús, ubicada en la Plaza de Armas de Arequipa, es una joya de la arquitectura barroca andina construida en el siglo XVII. Su fachada, tallada en sillar, destaca por sus intrincados detalles que combinan motivos indígenas y coloniales. En su interior, alberga altares dorados, pinturas de la escuela cuzqueña y una impresionante cúpula policromada en la Capilla de San Ignacio. Esta iglesia refleja la fusión cultural y el legado histórico de Arequipa, siendo uno de los templos más visitados de la ciudad.
         </string>
-    <string name="rating">A RatingBar is an extension of SeekBar and ProgressBar that shows a rating in stars.
-        The user can touch/drag or use arrow keys to set the rating when using the default size RatingBar.
-        The smaller RatingBar style ( R.attr.ratingBarStyleSmall) and the larger indicator-only style
-        (R.attr.ratingBarStyleIndicator) do not support user interaction and should only be used as indicators.
-        When using a RatingBar that supports user interaction, placing widgets to the left or right of the
-        RatingBar is discouraged.</string>
-    <string name="edit">A TextView displays text to the user and optionally allows them to edit it.
-        A TextView is a complete text editor, however the basic class is configured to not allow editing.
+    <string name="Santuarios">El Museo Santuarios Andinos en Arequipa es famoso por albergar la momia "Juanita", también conocida como la "Dama de Ampato", una joven inca sacrificada en el siglo XV y encontrada en el volcán Ampato. Este museo se dedica a la investigación y exhibición de artefactos relacionados con la cultura inca y los rituales de ofrenda en las montañas.</string>
+    <string name="Domingo">La Iglesia de Santo Domingo en Arequipa es un destacado templo colonial que combina elementos de arquitectura barroca y mestiza. Construida en el siglo XVI, su estructura de sillar (piedra volcánica blanca) es un ejemplo de la típica arquitectura arequipeña. Su fachada austera contrasta con el interior, donde se encuentran retablos tallados y dorados, además de una serie de pinturas de la escuela cuzqueña. La iglesia y su convento adyacente reflejan la historia religiosa y cultural de Arequipa, siendo un punto de interés tanto para fieles como para turistas.
         </string>
-    <string name="camera">The Android framework includes support for various cameras and camera features
-        available on devices, allowing you to capture pictures and videos in your applications.
-        This document discusses a quick, simple approach to image and video capture and outlines an advanced
-        approach for creating custom camera experiences for your users.</string>
-    <string name="recyclerview">RecyclerView is the ViewGroup that contains the views corresponding to your data.
-        Its a view itself so you add RecyclerView into your layout the way you would add any other UI element.
-        Each individual element in the list is defined by a view holder object.
-        RecyclerView is a ViewGroup added to the android studio as a successor of the GridView and ListView.
-        It is an improvement on both of them and can be found in the latest v-7 support packages.
-        It has been created to make possible construction of any lists with XML layouts as an item
-        which can be customized vastly while improving on the efficiency of ListViews and GridViews.
+    <string name="Catalina">El Monasterio de Santa Catalina de Siena, o Convento de Santa Catalina, es un complejo turístico religioso ubicado en el centro histórico de Arequipa, departamento de Arequipa, Perú.</string>
+    <string name="Catedral">La Catedral de Arequipa, ubicada en la Plaza de Armas, es una de las iglesias más emblemáticas de Perú y un símbolo de la arquitectura neoclásica en el país. Construida en sillar, una piedra volcánica blanca típica de la región, destaca por su imponente fachada y sus dos torres que dominan el centro de la ciudad. Fue erigida en el siglo XVII, reconstruida tras varios terremotos, y alberga un lujoso altar de mármol italiano y un gran órgano belga. La catedral es un testimonio de la historia y cultura de Arequipa, además de ser Patrimonio Cultural de la Humanidad.
     </string>
+    <string name="moral">Una casona colonial construida en el siglo XVIII, famosa por sus patios y su arquitectura de sillar.</string>
+    <string name="molino">Un molino de piedra construido en 1621, rodeado de bellos paisajes, que muestra la antigua tecnología agrícola de la región.</string>
+    <string name="barrio">Uno de los barrios más antiguos de Arequipa, con calles angostas, plazas y casas coloniales.</string>
+    <string name="agustin">Con una fachada barroca única, destaca por su arte en sillar y detalles ornamentales.</string>
+    <string name="pozo">Una casona colonial del siglo XVIII conocida por su arquitectura de sillar y sus elegantes balcones y patios interiores.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

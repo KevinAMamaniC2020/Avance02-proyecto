@@ -1,5 +1,6 @@
 package com.example.avance02_proyecto.fragments;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.SearchView;
@@ -44,6 +45,11 @@ public class HomeFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         searchView = view.findViewById(R.id.search);
 
+        View searchPlate = searchView.findViewById(androidx.appcompat.R.id.search_plate);
+        if (searchPlate != null) {
+            searchPlate.setBackgroundColor(Color.TRANSPARENT); // Hace transparente el fondo de la línea
+        }
+
         // Configuración de la lista y adaptador
         searchView.clearFocus();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -64,11 +70,17 @@ public class HomeFragment extends Fragment {
 
         // Datos de ejemplo
         dataList = new ArrayList<>();
-        dataList.add(new DataClass("Convento de Santa Catalina", R.string.camera, "Arquitectura", R.drawable.catalina_convento));
-        dataList.add(new DataClass("Catedral de Arequipa", R.string.recyclerview, "Arquitectura", R.drawable.catedral_arequipa));
-        dataList.add(new DataClass("Iglesia Compañia de Jesus", R.string.date, "Iglesia", R.drawable.iglesia_jesus));
-        dataList.add(new DataClass("Iglesia de Santo Domingo", R.string.edit, "Iglesia", R.drawable.iglesia_santo_domingo));
-        dataList.add(new DataClass("Museo de Santuarios Andinos", R.string.rating, "Museo", R.drawable.museo_sa));
+        dataList.add(new DataClass("Convento de Santa Catalina", R.string.Catalina, "Arquitectura", R.drawable.catalina_convento));
+        dataList.add(new DataClass("Catedral de Arequipa", R.string.Catedral, "Arquitectura", R.drawable.catedral_arequipa));
+        dataList.add(new DataClass("Iglesia Compañia de Jesus", R.string.IglesiaJesus, "Iglesia", R.drawable.iglesia_jesus));
+        dataList.add(new DataClass("Iglesia de Santo Domingo", R.string.Domingo, "Iglesia", R.drawable.iglesia_santo_domingo));
+        dataList.add(new DataClass("Museo de Santuarios Andinos", R.string.Santuarios, "Museo", R.drawable.museo_sa));
+        dataList.add(new DataClass("Casa Moral", R.string.moral, "Museo", R.drawable.casa_moral));
+        dataList.add(new DataClass("Molino de Sabandía", R.string.molino, "Arquitectura", R.drawable.molino_sabandia));
+        dataList.add(new DataClass("Barrio San Lazaro", R.string.barrio, "Arquitectura", R.drawable.barrio_san_lazaro));
+        dataList.add(new DataClass("Iglesia de San Agustín", R.string.agustin, "Iglesia", R.drawable.iglesia_san_agustin));
+        dataList.add(new DataClass("Casa Tristán del Pozo", R.string.pozo, "Museo", R.drawable.tristan_pozo));
+
 
         adapter = new MyAdapter(getContext(), dataList);
         recyclerView.setAdapter(adapter);
